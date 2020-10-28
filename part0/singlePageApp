@@ -1,0 +1,14 @@
+title single page app
+
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+Server->Browser: HTTP 200 response
+note over Browser: Load page
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+Server-->Browser: main.css
+note over Browser: Load main.css style file
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+Server-->Browser: main.js
+note over Browser: Loads and execute spa.js script file
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+Server-->Browser: { data: "" }
+note over Browser: Render notes 

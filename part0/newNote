@@ -1,0 +1,17 @@
+title new note
+
+note over Browser: Submit a new note
+Browser->Server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+note over Server: Create the note
+Server->Browser: HTTP 302 redirect /notes
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+note over Browser: Reload the page
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+Server-->Browser: main.css
+note over Browser: Load main.css style file
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+Server-->Browser: main.js
+note over Browser: Loads and execute main.js script file
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+Server-->Browser: { data: "hello there" }
+note over Browser: Render the note
